@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:10.3
+    environment:
+      - POSTGRES_USER=davidafdal
+      - POSTGRES_PASSWORD=gelang123
+    volumes:
+      - postgres_go:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+volumes:
+  postgres_go:
